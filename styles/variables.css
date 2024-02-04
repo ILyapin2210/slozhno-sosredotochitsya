@@ -4,12 +4,29 @@
 */
 
 :root {
+
+  /* ---- COLORS ---- */
+
   --main-color: #f1b2ce;
-  --accent-color: #ff0070;
+  --main-title-color: #db00ff;
+  --section-title-color: #ff0070;
+  --accented-title-color: #000028;
+  --accented-title-bg-color: #ff0070; 
+  --decor-color: #ff0070;
   --bg-color: #000028;
-  --title-color: #db00ff;
+
+  /* ---- LINKS ---- */
+
+  --cover-image: url(../images/cover-image-dark.png);
+
+  /* ---- TYPOGRAPHY ---- */
+
   --font-family: 'IBM Plex mono';
   --font-size: 18px;
-  --line-height: 23.4px;
+  --line-height: calc(18 / 23.4px);
+
+  /* ---- GEOMETRY ---- */
+
   --section-padding: clamp(10px, 0.2639rem + 1.5408vw, 20px);
+  --content-margin-block: clamp(40px, 1.3073rem + 5.0891vw, 60px);
 }
