@@ -15,7 +15,7 @@
   --accented-title-color: #353430;
   --accented-title-bg-color: #ff8dcb;
   --decor-color: #353430;
-  --link-decor-color: #ff8dcb;
+  --accent-color: #ff8dcb;
   --button-border-transparent: rgba(50, 49, 45, 0.4);
   --bg-color: #fff1f7;
   --cover-image: url(../images/cover-image-light.png);
@@ -23,6 +23,12 @@
 
 .page.theme_light .header__twinkle {
   display: none;
+}
+
+@media (width >= 1024px) {
+  .page.theme_light .header__title {
+    --accent-color: #ff0070;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -33,13 +39,19 @@
     --accented-title-color: #353430;
     --accented-title-bg-color: #ff8dcb;
     --decor-color: #353430;
-    --link-decor-color: #ff8dcb;
+    --accent-color: #ff8dcb;
     --button-border-transparent: rgba(50, 49, 45, 0.4);
     --bg-color: #fff1f7;
     --cover-image: url(../images/cover-image-light.png);
   }
 
-  .page.theme_light .header__twinkle {
+  .page.theme_auto .header__twinkle {
     display: none;
+  }
+}
+
+@media (prefers-color-scheme: light) and (width >= 1024px) {
+  .page.theme_auto .header__title {
+    --accent-color: #ff0070;
   }
 }

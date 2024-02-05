@@ -13,7 +13,6 @@
   --accented-title-bg-color: #ff0070;
   --decor-color: #ff0070;
   --accent-color: #ff0070;
-  --link-decor-color: #ff0070;
   --button-border-transparent: rgba(255, 0, 112, 0.4);
   --bg-color: #000028;
 
@@ -29,6 +28,6 @@
 
   /* ---- GEOMETRY ---- */
 
-  --section-padding: clamp(10px, 0.2639rem + 1.5408vw, 20px);
+  --section-padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   --content-margin-block: clamp(40px, 1.3073rem + 5.0891vw, 60px);
 }
