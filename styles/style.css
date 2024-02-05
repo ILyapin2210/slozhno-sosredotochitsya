@@ -210,7 +210,7 @@ a:focus-visible {
 
 .content__section-card {
   display: grid;
-  gap: 8.5px;
+  gap: 10px;
 }
 
 .content__section-card-title {
