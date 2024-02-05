@@ -13,6 +13,9 @@
   --accented-title-color: #000028;
   --accented-title-bg-color: #ff0070; 
   --decor-color: #ff0070;
+  --accent-color: #ff0070;
+  --link-decor-color: #ff0070;
+  --button-border-transparent: rgba(255, 0, 112, 0.4);
   --bg-color: #000028;
 
   /* ---- LINKS ---- */
@@ -23,7 +26,7 @@
 
   --font-family: 'IBM Plex mono';
   --font-size: 18px;
-  --line-height: calc(18 / 23.4px);
+  --line-height: calc(18 / 23.4);
 
   /* ---- GEOMETRY ---- */
 

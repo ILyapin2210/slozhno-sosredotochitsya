@@ -5,8 +5,8 @@
   width: 100%;
   min-height: 100dvh;
   font-family: var(--font-family, Arial, Helvetica, sans-serif);
-  font-size: var(--font-size, 18px);
-  line-height: var(--line-hight, 23.4px);
+  font-size: var(--font-size);
+  line-height: var(--line-hight);
   color: var(--main-color);
   background-color: var(--bg-color);
 }
@@ -16,6 +16,25 @@
 .title-decor {
   color: var(--accented-title-color);
   background-color: var(--accented-title-bg-color);
+}
+
+/* ---------- ССЫЛКИ ---------- */
+
+a {
+  text-shadow: 2px 2px 0 var(--link-decor-color);
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid var(--main-color);
+}
+
+a:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 1px solid var(--main-color);
 }
 
 /* ---------- ШАПКА САЙТА --------- */
@@ -41,7 +60,7 @@
 }
 
 .decorated-zone:before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: var(--section-padding);
   left: var(--section-padding);
@@ -53,7 +72,7 @@
 }
 
 .decorated-zone:after {
-  content: '';
+  content: "";
   position: absolute;
   top: var(--section-padding);
   right: var(--section-padding);
@@ -75,7 +94,7 @@
 }
 
 .header__twinkle::after {
-  content: '';
+  content: "";
   padding: 10px;
   margin: 0 4px;
   background-image: url(../images/twinkle-ellipse.png);
@@ -95,11 +114,13 @@
   gap: 10px;
 }
 
+/* ---------- КНОПКИ ---------- */
+
 .header__theme-menu-button {
   color: var(--decor-color);
   background-color: transparent;
   border: none;
-  line-height: 1.0;
+  line-height: 1;
   padding: 4px 12px;
   cursor: pointer;
 }
@@ -109,17 +130,29 @@
   border: 1px solid var(--decor-color);
 }
 
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-border-transparent);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--decor-color);
+}
+
 /* ---------- ЗАГОЛОВОК ШАПКИ ---------- */
 
 .header__title {
   color: var(--main-title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
-  text-shadow: 4px 4px 0 #ff0070;
+  text-shadow: 4px 4px 0 var(--accent-color);
   line-height: calc(95.7 / 116);
 }
 
-/* ---------- ПОДЗАГОЛОВОК ---------- */
+/* ---------- ПОДЗАГОЛОВОК ШАПКИ ---------- */
 
 .header__text {
   font-weight: 700;
@@ -195,7 +228,7 @@
     grid-template-columns: 1fr 2fr;
     gap: 25px;
   }
-  
+
   .content__section-title {
     max-width: 236px;
   }
@@ -205,7 +238,7 @@
   .content__section_2-col {
     gap: 10px;
   }
-  
+
   .content__section_3-col > ul {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -238,7 +271,7 @@
   .section__gallery {
     gap: 20px;
   }
-  
+
   .section__gallery-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -264,7 +297,7 @@
   }
 
   .section__gallery-item:nth-of-type(5) {
-    grid-column: 2 / span 2;`
+    grid-column: 2 / span 2;
   }
 }
 
@@ -286,17 +319,12 @@
   color: var(--main-title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
-  text-shadow: 2px 2px 0 #ff0070;
+  text-shadow: 2px 2px 0 var(--accent-color);
   line-height: calc(95.7 / 116);
 }
 
 @media screen and (width >= 768px) {
-  .footer__title{
+  .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
-
-
-
-
-

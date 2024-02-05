@@ -15,6 +15,8 @@
   --accented-title-color: #353430;
   --accented-title-bg-color: #ff8dcb;
   --decor-color: #353430;
+  --link-decor-color: #ff8dcb;
+  --button-border-transparent: rgba(50, 49, 45, 0.4);
   --bg-color: #fff1f7;
   --cover-image: url(./images/cover-image-light.png);
 }
@@ -31,7 +33,13 @@
     --accented-title-color: #353430;
     --accented-title-bg-color: #ff8dcb;
     --decor-color: #353430;
+    --link-decor-color: #ff8dcb;
+    --button-border-transparent: rgba(50, 49, 45, 0.4);
     --bg-color: #fff1f7;
     --cover-image: url(./images/cover-image-light.png);
+  }
+
+  .page.theme_light .header__twinkle {
+    display: none;
   }
 }
