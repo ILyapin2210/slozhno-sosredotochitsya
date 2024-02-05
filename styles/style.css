@@ -2,13 +2,18 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  width: 100%;
-  min-height: 100dvh;
+  inline-size: 100%;
+  min-block-size: 100dvh;
   font-family: var(--font-family, Arial, Helvetica, sans-serif);
   font-size: var(--font-size);
   line-height: var(--line-hight);
   color: var(--main-color);
   background-color: var(--bg-color);
+  background-image: var(--cover-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* ---------- ОФОРМЛЕНИЕ ДЛЯ ПОДЗАГОЛОВКОВ ---------- */
@@ -26,7 +31,7 @@ a {
 }
 
 a:hover {
-  border-bottom: 1px solid var(--main-color);
+  border-block-end: 1px solid var(--main-color);
 }
 
 a:focus {
@@ -41,16 +46,11 @@ a:focus-visible {
 
 .header {
   position: relative;
-  min-height: max(100dvh, 668px);
+  min-block-size: max(100dvh, 668px);
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   padding: var(--section-padding);
-  background-image: var(--cover-image);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 /* ---------- ДЕКОРАТИВНЫЕ УГОЛКИ ---------- */
@@ -62,33 +62,33 @@ a:focus-visible {
 .decorated-zone:before {
   content: "";
   position: absolute;
-  bottom: var(--section-padding);
-  left: var(--section-padding);
-  width: 25px;
-  height: 25px;
+  inset-block-end: var(--section-padding);
+  inset-inline-start: var(--section-padding);
+  inline-size: 25px;
+  block-size: 25px;
   background-color: transparent;
-  border-left: 1px solid var(--decor-color);
-  border-bottom: 1px solid var(--decor-color);
+  border-inline-start: 1px solid var(--decor-color);
+  border-block-end: 1px solid var(--decor-color);
 }
 
 .decorated-zone:after {
   content: "";
   position: absolute;
-  top: var(--section-padding);
-  right: var(--section-padding);
-  width: 25px;
-  height: 25px;
+  inset-block-start: var(--section-padding);
+  inset-inline-end: var(--section-padding);
+  inline-size: 25px;
+  block-size: 25px;
   background-color: transparent;
-  border-top: 1px solid var(--decor-color);
-  border-right: 1px solid var(--decor-color);
+  border-block-start: 1px solid var(--decor-color);
+  border-inline-end: 1px solid var(--decor-color);
 }
 
 /* ---------- ЛАМПОЧКА ---------- */
 
 .header__twinkle {
   position: absolute;
-  top: var(--section-padding);
-  right: var(--section-padding);
+  inset-block-start: var(--section-padding);
+  inset-inline-end: var(--section-padding);
   color: var(--decor-color);
   text-transform: uppercase;
 }
@@ -162,12 +162,12 @@ a:focus-visible {
 
 @media screen and (width >= 768px) {
   .header__title {
-    margin-left: -20px;
+    margin-inline-start: -20px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__text {
-    max-width: 50%;
+    max-inline-size: 50%;
     justify-self: end;
   }
 }
@@ -210,7 +210,7 @@ a:focus-visible {
 
 .content__section-card {
   display: grid;
-  gap: 10px;
+  gap: 8.5px;
 }
 
 .content__section-card-title {
@@ -230,7 +230,7 @@ a:focus-visible {
   }
 
   .content__section-title {
-    max-width: 236px;
+    max-inline-size: 236px;
   }
 }
 
@@ -244,7 +244,7 @@ a:focus-visible {
   }
 
   .content__section-title {
-    max-width: 315px;
+    max-inline-size: 315px;
   }
 }
 
@@ -261,8 +261,9 @@ a:focus-visible {
 }
 
 .section__gallery-image {
-  width: 100%;
-  height: 100%;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -301,16 +302,10 @@ a:focus-visible {
   }
 }
 
-@media screen and (width >= 1024px) {
-  .section__gallery-list {
-    grid-template-rows: 260px 315px 428px;
-  }
-}
-
 /* ---------- ПОДВАЛ ---------- */
 
 .footer {
-  min-height: max(668px, 100dvh);
+  min-block-size: max(668px, 100dvh);
   display: grid;
   place-content: center;
 }
