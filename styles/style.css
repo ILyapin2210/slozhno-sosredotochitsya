@@ -120,7 +120,7 @@ a:focus-visible {
 .header__theme-menu-button {
   color: var(--decor-color);
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;`
   line-height: 1;
   padding: 4px 12px;
   cursor: pointer;

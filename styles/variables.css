@@ -22,7 +22,7 @@
 
   /* ---- TYPOGRAPHY ---- */
 
-  --font-family: "IBM Plex mono";
+  --font-family: "IBM Plex mono", monospace;
   --font-size: 18px;
   --line-height: 1.3;
 
