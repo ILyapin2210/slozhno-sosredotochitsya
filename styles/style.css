@@ -96,8 +96,8 @@ a:focus-visible {
 .header__twinkle::after {
   content: "";
   display: inline-block;
-  width: 9px;
-  height: 9px;
+  inline-size: 9px;
+  block-size: 9px;
   margin: 0 10px;
   border-radius: 50%;
   background-color: var(--decor-color);
